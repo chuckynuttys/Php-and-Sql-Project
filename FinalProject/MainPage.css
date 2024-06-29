@@ -1,0 +1,36 @@
+.mainpage{
+    background-color: #D7D7D5;
+}
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chartwrap{
+    width: 1000px;
+    height: 500px;
+    align-self: center;
+    display: flex;
+}
+h1{
+    text-align: center;
+    color: #0F1E2E;
+}
+.form1{
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+    width: 300px;
+    display: flex;
+  }
+.in1{
+    background-color: #0F1E2E;
+    color: #E7ECEF;
+    width: 13rem;
+    height: 1.8rem;
+    margin: 10px;
+    align-self: center;
+    border: 5px black;
+    border-radius: 5px;
+  }

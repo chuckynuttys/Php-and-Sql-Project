@@ -1,0 +1,125 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    min-height: auto;
+    padding: 0;
+    min-height: 100vh;
+    margin: 0%;
+    overflow-y: scroll;
+}
+.wrapper{
+    margin-top: 0%;
+}
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+.wrapper{
+    /* display: inline; */
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 35px;
+   position: relative;
+}
+.wrapper i{
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.wrapper i:first-child{
+    left: -22px;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 32px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.carousel :where(.card, .img){
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+.carousel.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel.dragging .card{
+    cursor: grab;
+    user-select: none;
+}
+.carousel .card{
+    scroll-snap-align: start;
+    list-style: none;
+    height: 342 px;
+    background: #0F1E2E;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+}
+.card .img{
+    background: #a3CEF1;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    margin-top: 3%;
+}
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+.card h2{
+    color: #A3CEF1;
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 10px 0 5px;
+}
+.card span {
+    color: #6096BA;
+    font-size: 1.31rem;;
+}
+@media screen and (max-width: 900px){
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+@media screen and (max-width: 600px){
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
